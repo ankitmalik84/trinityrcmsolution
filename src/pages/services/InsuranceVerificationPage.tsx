@@ -42,6 +42,53 @@ const InsuranceVerificationPage: React.FC = () => {
       );
       document.head.appendChild(canonical);
     }
+
+    const updateMetaTag = (property: string, content: string) => {
+      let meta = document.querySelector(`meta[property="${property}"]`);
+      if (meta) {
+        meta.setAttribute("content", content);
+      } else {
+        meta = document.createElement("meta");
+        meta.setAttribute("property", property);
+        meta.setAttribute("content", content);
+        document.head.appendChild(meta);
+      }
+    };
+
+    updateMetaTag(
+      "og:url",
+      "https://trinityrcmsolution.com/services/insuranceVerification"
+    );
+    updateMetaTag(
+      "og:title",
+      "Insurance Verification & Eligibility Services - Trinity RCM Solution"
+    );
+    updateMetaTag(
+      "og:description",
+      "Real-time insurance verification and eligibility checks to confirm patient coverage before treatment."
+    );
+    updateMetaTag("og:image", "https://trinityrcmsolution.com/logo.jpeg");
+    updateMetaTag("og:image:width", "1200");
+    updateMetaTag("og:image:height", "630");
+    updateMetaTag(
+      "og:image:alt",
+      "Trinity RCM Solution - Insurance Verification"
+    );
+
+    updateMetaTag("twitter:card", "summary_large_image");
+    updateMetaTag(
+      "twitter:url",
+      "https://trinityrcmsolution.com/services/insuranceVerification"
+    );
+    updateMetaTag(
+      "twitter:title",
+      "Insurance Verification & Eligibility Services - Trinity RCM Solution"
+    );
+    updateMetaTag(
+      "twitter:description",
+      "Real-time insurance verification and eligibility checks to confirm patient coverage before treatment."
+    );
+    updateMetaTag("twitter:image", "https://trinityrcmsolution.com/logo.jpeg");
   }, []);
 
   const benefits = [

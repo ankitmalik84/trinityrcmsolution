@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   Shield,
   FileText,
@@ -55,64 +56,75 @@ const Services: React.FC = () => {
       title: "Insurance Verification & Eligibility Check",
       description:
         "Real-time verification to confirm patient coverage and benefits.",
+      path: "/services/insuranceVerification",
     },
     {
       icon: FileText,
       title: "Prior Authorization Management",
       description:
         "Efficient authorization management to prevent claim denials.",
+      path: "/services/priorAuthorization",
     },
     {
       icon: CreditCard,
       title: "Medical Coding & Billing",
       description:
         "Accurate medical coding using CPT, ICD-10, and HCPCS codes.",
+      path: "/services/medicalCodingBilling",
     },
     {
       icon: DollarSign,
       title: "A/R and Denial Management",
       description:
         "Comprehensive accounts receivable management and denial appeals.",
+      path: "/services/arManagement",
     },
     {
       icon: CreditCard,
       title: "Payment Posting and EFT/Deposit Reconciliation",
       description: "Automated payment posting and reconciliation processes.",
+      path: "/services/paymentPosting",
     },
     {
       icon: Phone,
       title: "Patient Billing & Support",
       description:
         "Patient-friendly billing and comprehensive support services.",
+      path: "/contact",
     },
     {
       icon: ClipboardList,
       title: "Revenue Cycle Management",
       description: "End-to-end revenue cycle optimization and management.",
+      path: "/services/revenueCycleManagement",
     },
     {
       icon: Users,
       title: "Provider Credentialing/Fee Negotiation",
       description:
         "Complete provider enrollment and fee schedule negotiations.",
+      path: "/services/providerCredentialing",
     },
     {
       icon: FileText,
       title: "Practice Transition and Planning",
       description:
         "Smooth practice transitions and strategic planning support.",
+      path: "/contact",
     },
     {
       icon: DollarSign,
       title: "Legacy A/R Resolution",
       description:
         "Resolution of aging accounts receivable and outstanding balances.",
+      path: "/services/arManagement",
     },
     {
       icon: CheckCircle,
       title: "Credit A/R Resolution",
       description:
         "Management and resolution of credit balances and overpayments.",
+      path: "/services/arManagement",
     },
   ];
 
@@ -231,38 +243,39 @@ const Services: React.FC = () => {
             viewport={{ once: true, amount: 0.2 }}
           >
             {medicalServices.map((service, index) => (
-              <motion.div
-                key={index}
-                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover-lift group border border-gray-100"
-                variants={serviceCardVariants}
-                whileHover={{
-                  y: -10,
-                  scale: 1.05,
-                  boxShadow: "0 25px 50px rgba(0, 0, 0, 0.15)",
-                }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
+              <Link key={index} to={service.path} className="block">
                 <motion.div
-                  className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-glow"
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.6 }}
+                  className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover-lift group border border-gray-100 cursor-pointer h-full"
+                  variants={serviceCardVariants}
+                  whileHover={{
+                    y: -10,
+                    scale: 1.05,
+                    boxShadow: "0 25px 50px rgba(0, 0, 0, 0.15)",
+                  }}
+                  transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <service.icon className="w-8 h-8 text-white" />
+                  <motion.div
+                    className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-glow"
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    <service.icon className="w-8 h-8 text-white" />
+                  </motion.div>
+                  <motion.h4
+                    className="text-xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors"
+                    whileHover={{ x: 5 }}
+                  >
+                    {service.title}
+                  </motion.h4>
+                  <motion.p
+                    className="text-gray-600 leading-relaxed"
+                    initial={{ opacity: 0.8 }}
+                    whileHover={{ opacity: 1 }}
+                  >
+                    {service.description}
+                  </motion.p>
                 </motion.div>
-                <motion.h4
-                  className="text-xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors"
-                  whileHover={{ x: 5 }}
-                >
-                  {service.title}
-                </motion.h4>
-                <motion.p
-                  className="text-gray-600 leading-relaxed"
-                  initial={{ opacity: 0.8 }}
-                  whileHover={{ opacity: 1 }}
-                >
-                  {service.description}
-                </motion.p>
-              </motion.div>
+              </Link>
             ))}
           </motion.div>
         </motion.div>
@@ -336,30 +349,36 @@ const Services: React.FC = () => {
               Get a free RCM audit and discover how we can help maximize your
               practice's revenue potential.
             </motion.p>
-            <motion.button
-              className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-12 py-4 rounded-2xl text-xl font-bold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-glow hover-lift relative z-10"
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 20px 40px rgba(251, 191, 36, 0.4)",
-              }}
-              whileTap={{ scale: 0.95 }}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              animate={{
-                boxShadow: [
-                  "0 10px 30px rgba(251, 191, 36, 0.3)",
-                  "0 15px 35px rgba(251, 191, 36, 0.5)",
-                  "0 10px 30px rgba(251, 191, 36, 0.3)",
-                ],
-              }}
-              transition={{
-                duration: 0.8,
-                delay: 0.4,
-                boxShadow: { duration: 2, repeat: Infinity, ease: "easeInOut" },
-              }}
-            >
-              Schedule your Free RCM Audit with our experts
-            </motion.button>
+            <Link to="/contact">
+              <motion.button
+                className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-12 py-4 rounded-2xl text-xl font-bold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-glow hover-lift relative z-10"
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 20px 40px rgba(251, 191, 36, 0.4)",
+                }}
+                whileTap={{ scale: 0.95 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                animate={{
+                  boxShadow: [
+                    "0 10px 30px rgba(251, 191, 36, 0.3)",
+                    "0 15px 35px rgba(251, 191, 36, 0.5)",
+                    "0 10px 30px rgba(251, 191, 36, 0.3)",
+                  ],
+                }}
+                transition={{
+                  duration: 0.8,
+                  delay: 0.4,
+                  boxShadow: {
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  },
+                }}
+              >
+                Schedule your Free RCM Audit with our experts
+              </motion.button>
+            </Link>
           </motion.div>
         </motion.div>
       </motion.div>

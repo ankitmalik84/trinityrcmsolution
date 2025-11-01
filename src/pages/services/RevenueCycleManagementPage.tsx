@@ -73,6 +73,13 @@ const RevenueCycleManagementPage: React.FC = () => {
       "og:description",
       "Comprehensive Revenue Cycle Management services to optimize your healthcare practice's financial performance."
     );
+    updateMetaTag("og:image", "https://trinityrcmsolution.com/logo.jpeg");
+    updateMetaTag("og:image:width", "1200");
+    updateMetaTag("og:image:height", "630");
+    updateMetaTag(
+      "og:image:alt",
+      "Trinity RCM Solution - Revenue Cycle Management"
+    );
 
     updateMetaTag(
       "twitter:url",
@@ -86,6 +93,7 @@ const RevenueCycleManagementPage: React.FC = () => {
       "twitter:description",
       "Comprehensive Revenue Cycle Management services to optimize your healthcare practice's financial performance."
     );
+    updateMetaTag("twitter:image", "https://trinityrcmsolution.com/logo.jpeg");
   }, []);
 
   const benefits = [

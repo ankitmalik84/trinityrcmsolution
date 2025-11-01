@@ -48,6 +48,50 @@ const PaymentPostingPage: React.FC = () => {
       );
       document.head.appendChild(canonical);
     }
+
+    const updateMetaTag = (property: string, content: string) => {
+      let meta = document.querySelector(`meta[property="${property}"]`);
+      if (meta) {
+        meta.setAttribute("content", content);
+      } else {
+        meta = document.createElement("meta");
+        meta.setAttribute("property", property);
+        meta.setAttribute("content", content);
+        document.head.appendChild(meta);
+      }
+    };
+
+    updateMetaTag(
+      "og:url",
+      "https://trinityrcmsolution.com/services/paymentPosting"
+    );
+    updateMetaTag(
+      "og:title",
+      "Payment Posting & Reconciliation Services - Trinity RCM Solution"
+    );
+    updateMetaTag(
+      "og:description",
+      "Automated payment posting and reconciliation services for faster payment processing."
+    );
+    updateMetaTag("og:image", "https://trinityrcmsolution.com/logo.jpeg");
+    updateMetaTag("og:image:width", "1200");
+    updateMetaTag("og:image:height", "630");
+    updateMetaTag("og:image:alt", "Trinity RCM Solution - Payment Posting");
+
+    updateMetaTag("twitter:card", "summary_large_image");
+    updateMetaTag(
+      "twitter:url",
+      "https://trinityrcmsolution.com/services/paymentPosting"
+    );
+    updateMetaTag(
+      "twitter:title",
+      "Payment Posting & Reconciliation Services - Trinity RCM Solution"
+    );
+    updateMetaTag(
+      "twitter:description",
+      "Automated payment posting and reconciliation services for faster payment processing."
+    );
+    updateMetaTag("twitter:image", "https://trinityrcmsolution.com/logo.jpeg");
   }, []);
 
   const benefits = [

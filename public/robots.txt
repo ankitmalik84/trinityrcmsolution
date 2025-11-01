@@ -8,10 +8,8 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
 
-# Allow crawling of all public content
+# Allow crawling of all public pages
 Allow: /
-Allow: /#about
-Allow: /#solution
-Allow: /#specialties
-Allow: /#testimonials
-Allow: /#contact
+Allow: /contact
+Allow: /testimonials
+Allow: /services/

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -102,38 +103,42 @@ const Hero: React.FC = () => {
                 className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
                 variants={itemVariants}
               >
-                <motion.button
-                  className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-10 py-5 rounded-2xl text-xl font-bold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 flex items-center gap-3 shadow-glow-lg hover-lift"
-                  whileHover={{
-                    scale: 1.05,
-                    boxShadow: "0 20px 40px rgba(251, 191, 36, 0.4)",
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                  animate={{
-                    boxShadow: [
-                      "0 10px 30px rgba(251, 191, 36, 0.3)",
-                      "0 15px 35px rgba(251, 191, 36, 0.5)",
-                      "0 10px 30px rgba(251, 191, 36, 0.3)",
-                    ],
-                  }}
-                  transition={{
-                    boxShadow: {
-                      duration: 2,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    },
-                  }}
-                >
-                  <span>Schedule Free RCM Audit</span>
-                  <ArrowRight className="w-6 h-6" />
-                </motion.button>
-                <motion.button
-                  className="glass text-white px-10 py-5 rounded-2xl text-xl font-bold hover:bg-white/20 transition-all duration-300 hover-lift"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Get in Touch
-                </motion.button>
+                <Link to="/contact">
+                  <motion.button
+                    className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-10 py-5 rounded-2xl text-xl font-bold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 flex items-center gap-3 shadow-glow-lg hover-lift"
+                    whileHover={{
+                      scale: 1.05,
+                      boxShadow: "0 20px 40px rgba(251, 191, 36, 0.4)",
+                    }}
+                    whileTap={{ scale: 0.95 }}
+                    animate={{
+                      boxShadow: [
+                        "0 10px 30px rgba(251, 191, 36, 0.3)",
+                        "0 15px 35px rgba(251, 191, 36, 0.5)",
+                        "0 10px 30px rgba(251, 191, 36, 0.3)",
+                      ],
+                    }}
+                    transition={{
+                      boxShadow: {
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      },
+                    }}
+                  >
+                    <span>Schedule Free RCM Audit</span>
+                    <ArrowRight className="w-6 h-6" />
+                  </motion.button>
+                </Link>
+                <Link to="/contact">
+                  <motion.button
+                    className="glass text-white px-10 py-5 rounded-2xl text-xl font-bold hover:bg-white/20 transition-all duration-300 hover-lift"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    Get in Touch
+                  </motion.button>
+                </Link>
               </motion.div>
             </div>
             <div className="flex-shrink-0">

@@ -62,6 +62,10 @@ const ContactPage: React.FC = () => {
       "og:description",
       "Contact Trinity RCM Solution for expert healthcare revenue cycle management services. Get a free RCM audit and consultation."
     );
+    updateMetaTag("og:image", "https://trinityrcmsolution.com/logo.jpeg");
+    updateMetaTag("og:image:width", "1200");
+    updateMetaTag("og:image:height", "630");
+    updateMetaTag("og:image:alt", "Trinity RCM Solution - Contact Us");
 
     // Update Twitter tags
     updateMetaTag("twitter:url", "https://trinityrcmsolution.com/contact");
@@ -73,6 +77,7 @@ const ContactPage: React.FC = () => {
       "twitter:description",
       "Contact Trinity RCM Solution for expert healthcare revenue cycle management services. Get a free RCM audit and consultation."
     );
+    updateMetaTag("twitter:image", "https://trinityrcmsolution.com/logo.jpeg");
   }, []);
 
   return (
