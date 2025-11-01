@@ -114,7 +114,7 @@ function generateHTML(route, meta, baseUrl) {
 // Generate HTML files
 function generatePages() {
   const distPath = path.join(__dirname, 'dist');
-  const baseUrl = 'https://trinityrcmsolution.vercel.app/';
+  const baseUrl = 'https://trinityrcmsolution.vercel.app';
 
   console.log('🚀 Generating static HTML pages for SEO...\n');
 
