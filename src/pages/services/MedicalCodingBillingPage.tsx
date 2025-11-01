@@ -12,44 +12,32 @@ import {
 } from "lucide-react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { updateSEO } from "../../utils/seo";
 
 const MedicalCodingBillingPage: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Medical Coding & Billing Services - Trinity RCM Solution";
 
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Expert medical coding and billing services using CPT, ICD-10, and HCPCS codes. Accurate coding for maximum reimbursement and faster claim processing."
-      );
-    } else {
-      metaDescription = document.createElement("meta");
-      metaDescription.setAttribute("name", "description");
-      metaDescription.setAttribute(
-        "content",
-        "Expert medical coding and billing services using CPT, ICD-10, and HCPCS codes. Accurate coding for maximum reimbursement and faster claim processing."
-      );
-      document.head.appendChild(metaDescription);
-    }
+    // Update SEO meta tags
+    updateSEO({
+      title: "Medical Coding & Billing Services - Trinity RCM Solution",
+      description:
+        "Expert medical coding and billing services using CPT, ICD-10, and HCPCS codes. Accurate coding for maximum reimbursement and faster claim processing.",
+      canonical: "https://trinityrcmsolution.com/services/medicalCodingBilling",
+      ogTitle: "Medical Coding & Billing Services - Trinity RCM Solution",
+      ogDescription:
+        "Expert medical coding and billing services using CPT, ICD-10, and HCPCS codes. Accurate coding for maximum reimbursement.",
+      ogImage: "https://trinityrcmsolution.com/logo.png",
+      ogImageWidth: "1200",
+      ogImageHeight: "630",
+      ogImageAlt: "Trinity RCM Solution - Medical Coding & Billing",
+      twitterTitle: "Medical Coding & Billing Services - Trinity RCM Solution",
+      twitterDescription:
+        "Expert medical coding and billing services using CPT, ICD-10, and HCPCS codes. Accurate coding for maximum reimbursement.",
+      twitterImage: "https://trinityrcmsolution.com/logo.png",
+    });
 
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (canonical) {
-      canonical.setAttribute(
-        "href",
-        "https://trinityrcmsolution.com/services/medicalCodingBilling"
-      );
-    } else {
-      canonical = document.createElement("link");
-      canonical.setAttribute("rel", "canonical");
-      canonical.setAttribute(
-        "href",
-        "https://trinityrcmsolution.com/services/medicalCodingBilling"
-      );
-      document.head.appendChild(canonical);
-    }
-
+    // Update OG and Twitter URL
     const updateMetaTag = (property: string, content: string) => {
       let meta = document.querySelector(`meta[property="${property}"]`);
       if (meta) {
@@ -61,41 +49,14 @@ const MedicalCodingBillingPage: React.FC = () => {
         document.head.appendChild(meta);
       }
     };
-
     updateMetaTag(
       "og:url",
       "https://trinityrcmsolution.com/services/medicalCodingBilling"
     );
     updateMetaTag(
-      "og:title",
-      "Medical Coding & Billing Services - Trinity RCM Solution"
-    );
-    updateMetaTag(
-      "og:description",
-      "Expert medical coding and billing services using CPT, ICD-10, and HCPCS codes. Accurate coding for maximum reimbursement."
-    );
-    updateMetaTag("og:image", "https://trinityrcmsolution.com/logo.png");
-    updateMetaTag("og:image:width", "1200");
-    updateMetaTag("og:image:height", "630");
-    updateMetaTag(
-      "og:image:alt",
-      "Trinity RCM Solution - Medical Coding & Billing"
-    );
-
-    updateMetaTag("twitter:card", "summary_large_image");
-    updateMetaTag(
       "twitter:url",
       "https://trinityrcmsolution.com/services/medicalCodingBilling"
     );
-    updateMetaTag(
-      "twitter:title",
-      "Medical Coding & Billing Services - Trinity RCM Solution"
-    );
-    updateMetaTag(
-      "twitter:description",
-      "Expert medical coding and billing services using CPT, ICD-10, and HCPCS codes. Accurate coding for maximum reimbursement."
-    );
-    updateMetaTag("twitter:image", "https://trinityrcmsolution.com/logo.png");
   }, []);
 
   const codeTypes = [

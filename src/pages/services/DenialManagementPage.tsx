@@ -10,45 +10,33 @@ import {
 } from "lucide-react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { updateSEO } from "../../utils/seo";
 
 const DenialManagementPage: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title =
-      "Denial Management & Appeals Services - Trinity RCM Solution";
 
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Expert denial management and appeals services to recover denied claims and reduce future denials. Increase revenue recovery with strategic appeals process."
-      );
-    } else {
-      metaDescription = document.createElement("meta");
-      metaDescription.setAttribute("name", "description");
-      metaDescription.setAttribute(
-        "content",
-        "Expert denial management and appeals services to recover denied claims and reduce future denials. Increase revenue recovery with strategic appeals process."
-      );
-      document.head.appendChild(metaDescription);
-    }
+    // Update SEO meta tags
+    updateSEO({
+      title: "Denial Management & Appeals Services - Trinity RCM Solution",
+      description:
+        "Expert denial management and appeals services to recover denied claims and reduce future denials. Increase revenue recovery with strategic appeals process.",
+      canonical: "https://trinityrcmsolution.com/services/denialManagement",
+      ogTitle: "Denial Management & Appeals Services - Trinity RCM Solution",
+      ogDescription:
+        "Expert denial management and appeals services to recover denied claims and reduce future denials.",
+      ogImage: "https://trinityrcmsolution.com/logo.png",
+      ogImageWidth: "1200",
+      ogImageHeight: "630",
+      ogImageAlt: "Trinity RCM Solution - Denial Management",
+      twitterTitle:
+        "Denial Management & Appeals Services - Trinity RCM Solution",
+      twitterDescription:
+        "Expert denial management and appeals services to recover denied claims and reduce future denials.",
+      twitterImage: "https://trinityrcmsolution.com/logo.png",
+    });
 
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (canonical) {
-      canonical.setAttribute(
-        "href",
-        "https://trinityrcmsolution.com/services/denialManagement"
-      );
-    } else {
-      canonical = document.createElement("link");
-      canonical.setAttribute("rel", "canonical");
-      canonical.setAttribute(
-        "href",
-        "https://trinityrcmsolution.com/services/denialManagement"
-      );
-      document.head.appendChild(canonical);
-    }
-
+    // Update OG and Twitter URL
     const updateMetaTag = (property: string, content: string) => {
       let meta = document.querySelector(`meta[property="${property}"]`);
       if (meta) {
@@ -60,38 +48,14 @@ const DenialManagementPage: React.FC = () => {
         document.head.appendChild(meta);
       }
     };
-
     updateMetaTag(
       "og:url",
       "https://trinityrcmsolution.com/services/denialManagement"
     );
     updateMetaTag(
-      "og:title",
-      "Denial Management & Appeals Services - Trinity RCM Solution"
-    );
-    updateMetaTag(
-      "og:description",
-      "Expert denial management and appeals services to recover denied claims and reduce future denials."
-    );
-    updateMetaTag("og:image", "https://trinityrcmsolution.com/logo.png");
-    updateMetaTag("og:image:width", "1200");
-    updateMetaTag("og:image:height", "630");
-    updateMetaTag("og:image:alt", "Trinity RCM Solution - Denial Management");
-
-    updateMetaTag("twitter:card", "summary_large_image");
-    updateMetaTag(
       "twitter:url",
       "https://trinityrcmsolution.com/services/denialManagement"
     );
-    updateMetaTag(
-      "twitter:title",
-      "Denial Management & Appeals Services - Trinity RCM Solution"
-    );
-    updateMetaTag(
-      "twitter:description",
-      "Expert denial management and appeals services to recover denied claims and reduce future denials."
-    );
-    updateMetaTag("twitter:image", "https://trinityrcmsolution.com/logo.png");
   }, []);
 
   const benefits = [

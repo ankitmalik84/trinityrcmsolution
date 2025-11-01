@@ -1,11 +1,40 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Services from "../components/Services";
 // import Specialties from "../components/Specialties";
 import Footer from "../components/Footer";
+import { updateSEO } from "../utils/seo";
 
 const HomePage: React.FC = () => {
+  useEffect(() => {
+    // Scroll to top on mount
+    window.scrollTo(0, 0);
+
+    // Update SEO meta tags for homepage
+    updateSEO({
+      title:
+        "Trinity RCM Solution - Healthcare Revenue Cycle Management Services",
+      description:
+        "Leading healthcare RCM solution provider offering dental and medical billing, coding, credentialing, and revenue cycle management services. Free RCM audit available.",
+      canonical: "https://trinityrcmsolution.com/",
+      ogTitle: "Trinity RCM Solution - Healthcare Revenue Cycle Management",
+      ogDescription:
+        "Leading healthcare RCM solution provider offering dental and medical billing, coding, credentialing, and revenue cycle management services.",
+      ogUrl: "https://trinityrcmsolution.com/",
+      ogImage: "https://trinityrcmsolution.com/logo.png",
+      ogImageWidth: "1200",
+      ogImageHeight: "630",
+      ogImageAlt: "Trinity RCM Solution - Healthcare Revenue Cycle Management",
+      twitterTitle:
+        "Trinity RCM Solution - Healthcare Revenue Cycle Management",
+      twitterDescription:
+        "Leading healthcare RCM solution provider offering dental and medical billing, coding, credentialing, and revenue cycle management services.",
+      twitterUrl: "https://trinityrcmsolution.com/",
+      twitterImage: "https://trinityrcmsolution.com/logo.png",
+    });
+  }, []);
+
   return (
     <div className="min-h-screen">
       <Header />

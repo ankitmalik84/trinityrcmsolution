@@ -4,45 +4,36 @@ import { motion } from "framer-motion";
 import { UserCheck, Clock, Shield, TrendingUp, Briefcase } from "lucide-react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { updateSEO } from "../../utils/seo";
 
 const ProviderCredentialingPage: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title =
-      "Provider Credentialing & Enrollment Services - Trinity RCM Solution";
 
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Expert provider credentialing and payer enrollment services. Fast, efficient enrollment with insurance networks to get providers credentialed quickly."
-      );
-    } else {
-      metaDescription = document.createElement("meta");
-      metaDescription.setAttribute("name", "description");
-      metaDescription.setAttribute(
-        "content",
-        "Expert provider credentialing and payer enrollment services. Fast, efficient enrollment with insurance networks to get providers credentialed quickly."
-      );
-      document.head.appendChild(metaDescription);
-    }
+    // Update SEO meta tags
+    updateSEO({
+      title:
+        "Provider Credentialing & Enrollment Services - Trinity RCM Solution",
+      description:
+        "Expert provider credentialing and payer enrollment services. Fast, efficient enrollment with insurance networks to get providers credentialed quickly.",
+      canonical:
+        "https://trinityrcmsolution.com/services/providerCredentialing",
+      ogTitle:
+        "Provider Credentialing & Enrollment Services - Trinity RCM Solution",
+      ogDescription:
+        "Expert provider credentialing and payer enrollment services. Fast, efficient enrollment with insurance networks.",
+      ogImage: "https://trinityrcmsolution.com/logo.png",
+      ogImageWidth: "1200",
+      ogImageHeight: "630",
+      ogImageAlt: "Trinity RCM Solution - Provider Credentialing",
+      twitterTitle:
+        "Provider Credentialing & Enrollment Services - Trinity RCM Solution",
+      twitterDescription:
+        "Expert provider credentialing and payer enrollment services. Fast, efficient enrollment with insurance networks.",
+      twitterImage: "https://trinityrcmsolution.com/logo.png",
+    });
 
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (canonical) {
-      canonical.setAttribute(
-        "href",
-        "https://trinityrcmsolution.com/services/providerCredentialing"
-      );
-    } else {
-      canonical = document.createElement("link");
-      canonical.setAttribute("rel", "canonical");
-      canonical.setAttribute(
-        "href",
-        "https://trinityrcmsolution.com/services/providerCredentialing"
-      );
-      document.head.appendChild(canonical);
-    }
-
+    // Update OG and Twitter URL
     const updateMetaTag = (property: string, content: string) => {
       let meta = document.querySelector(`meta[property="${property}"]`);
       if (meta) {
@@ -54,41 +45,14 @@ const ProviderCredentialingPage: React.FC = () => {
         document.head.appendChild(meta);
       }
     };
-
     updateMetaTag(
       "og:url",
       "https://trinityrcmsolution.com/services/providerCredentialing"
     );
     updateMetaTag(
-      "og:title",
-      "Provider Credentialing & Enrollment Services - Trinity RCM Solution"
-    );
-    updateMetaTag(
-      "og:description",
-      "Expert provider credentialing and payer enrollment services. Fast, efficient enrollment with insurance networks."
-    );
-    updateMetaTag("og:image", "https://trinityrcmsolution.com/logo.png");
-    updateMetaTag("og:image:width", "1200");
-    updateMetaTag("og:image:height", "630");
-    updateMetaTag(
-      "og:image:alt",
-      "Trinity RCM Solution - Provider Credentialing"
-    );
-
-    updateMetaTag("twitter:card", "summary_large_image");
-    updateMetaTag(
       "twitter:url",
       "https://trinityrcmsolution.com/services/providerCredentialing"
     );
-    updateMetaTag(
-      "twitter:title",
-      "Provider Credentialing & Enrollment Services - Trinity RCM Solution"
-    );
-    updateMetaTag(
-      "twitter:description",
-      "Expert provider credentialing and payer enrollment services. Fast, efficient enrollment with insurance networks."
-    );
-    updateMetaTag("twitter:image", "https://trinityrcmsolution.com/logo.png");
   }, []);
 
   const benefits = [

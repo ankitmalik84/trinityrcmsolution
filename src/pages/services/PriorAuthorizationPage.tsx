@@ -4,45 +4,33 @@ import { motion } from "framer-motion";
 import { FileCheck, Clock, Shield, CheckCircle, Send } from "lucide-react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { updateSEO } from "../../utils/seo";
 
 const PriorAuthorizationPage: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title =
-      "Prior Authorization Management Services - Trinity RCM Solution";
 
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Expert prior authorization services to secure approvals before treatment. Fast turnaround times and high approval rates for procedures and medications."
-      );
-    } else {
-      metaDescription = document.createElement("meta");
-      metaDescription.setAttribute("name", "description");
-      metaDescription.setAttribute(
-        "content",
-        "Expert prior authorization services to secure approvals before treatment. Fast turnaround times and high approval rates for procedures and medications."
-      );
-      document.head.appendChild(metaDescription);
-    }
+    // Update SEO meta tags
+    updateSEO({
+      title: "Prior Authorization Management Services - Trinity RCM Solution",
+      description:
+        "Expert prior authorization services to secure approvals before treatment. Fast turnaround times and high approval rates for procedures and medications.",
+      canonical: "https://trinityrcmsolution.com/services/priorAuthorization",
+      ogTitle: "Prior Authorization Management Services - Trinity RCM Solution",
+      ogDescription:
+        "Expert prior authorization services to secure approvals before treatment. Fast turnaround times and high approval rates.",
+      ogImage: "https://trinityrcmsolution.com/logo.png",
+      ogImageWidth: "1200",
+      ogImageHeight: "630",
+      ogImageAlt: "Trinity RCM Solution - Prior Authorization",
+      twitterTitle:
+        "Prior Authorization Management Services - Trinity RCM Solution",
+      twitterDescription:
+        "Expert prior authorization services to secure approvals before treatment. Fast turnaround times and high approval rates.",
+      twitterImage: "https://trinityrcmsolution.com/logo.png",
+    });
 
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (canonical) {
-      canonical.setAttribute(
-        "href",
-        "https://trinityrcmsolution.com/services/priorAuthorization"
-      );
-    } else {
-      canonical = document.createElement("link");
-      canonical.setAttribute("rel", "canonical");
-      canonical.setAttribute(
-        "href",
-        "https://trinityrcmsolution.com/services/priorAuthorization"
-      );
-      document.head.appendChild(canonical);
-    }
-
+    // Update OG and Twitter URL
     const updateMetaTag = (property: string, content: string) => {
       let meta = document.querySelector(`meta[property="${property}"]`);
       if (meta) {
@@ -54,38 +42,14 @@ const PriorAuthorizationPage: React.FC = () => {
         document.head.appendChild(meta);
       }
     };
-
     updateMetaTag(
       "og:url",
       "https://trinityrcmsolution.com/services/priorAuthorization"
     );
     updateMetaTag(
-      "og:title",
-      "Prior Authorization Management Services - Trinity RCM Solution"
-    );
-    updateMetaTag(
-      "og:description",
-      "Expert prior authorization services to secure approvals before treatment. Fast turnaround times and high approval rates."
-    );
-    updateMetaTag("og:image", "https://trinityrcmsolution.com/logo.png");
-    updateMetaTag("og:image:width", "1200");
-    updateMetaTag("og:image:height", "630");
-    updateMetaTag("og:image:alt", "Trinity RCM Solution - Prior Authorization");
-
-    updateMetaTag("twitter:card", "summary_large_image");
-    updateMetaTag(
       "twitter:url",
       "https://trinityrcmsolution.com/services/priorAuthorization"
     );
-    updateMetaTag(
-      "twitter:title",
-      "Prior Authorization Management Services - Trinity RCM Solution"
-    );
-    updateMetaTag(
-      "twitter:description",
-      "Expert prior authorization services to secure approvals before treatment. Fast turnaround times and high approval rates."
-    );
-    updateMetaTag("twitter:image", "https://trinityrcmsolution.com/logo.png");
   }, []);
 
   const benefits = [

@@ -10,45 +10,34 @@ import {
 } from "lucide-react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { updateSEO } from "../../utils/seo";
 
 const PaymentPostingPage: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title =
-      "Payment Posting & Reconciliation Services - Trinity RCM Solution";
 
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Automated payment posting and reconciliation services for faster payment processing. EFT posting, deposit reconciliation, and accurate payment tracking."
-      );
-    } else {
-      metaDescription = document.createElement("meta");
-      metaDescription.setAttribute("name", "description");
-      metaDescription.setAttribute(
-        "content",
-        "Automated payment posting and reconciliation services for faster payment processing. EFT posting, deposit reconciliation, and accurate payment tracking."
-      );
-      document.head.appendChild(metaDescription);
-    }
+    // Update SEO meta tags
+    updateSEO({
+      title: "Payment Posting & Reconciliation Services - Trinity RCM Solution",
+      description:
+        "Automated payment posting and reconciliation services for faster payment processing. EFT posting, deposit reconciliation, and accurate payment tracking.",
+      canonical: "https://trinityrcmsolution.com/services/paymentPosting",
+      ogTitle:
+        "Payment Posting & Reconciliation Services - Trinity RCM Solution",
+      ogDescription:
+        "Automated payment posting and reconciliation services for faster payment processing.",
+      ogImage: "https://trinityrcmsolution.com/logo.png",
+      ogImageWidth: "1200",
+      ogImageHeight: "630",
+      ogImageAlt: "Trinity RCM Solution - Payment Posting",
+      twitterTitle:
+        "Payment Posting & Reconciliation Services - Trinity RCM Solution",
+      twitterDescription:
+        "Automated payment posting and reconciliation services for faster payment processing.",
+      twitterImage: "https://trinityrcmsolution.com/logo.png",
+    });
 
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (canonical) {
-      canonical.setAttribute(
-        "href",
-        "https://trinityrcmsolution.com/services/paymentPosting"
-      );
-    } else {
-      canonical = document.createElement("link");
-      canonical.setAttribute("rel", "canonical");
-      canonical.setAttribute(
-        "href",
-        "https://trinityrcmsolution.com/services/paymentPosting"
-      );
-      document.head.appendChild(canonical);
-    }
-
+    // Update OG and Twitter URL
     const updateMetaTag = (property: string, content: string) => {
       let meta = document.querySelector(`meta[property="${property}"]`);
       if (meta) {
@@ -60,38 +49,14 @@ const PaymentPostingPage: React.FC = () => {
         document.head.appendChild(meta);
       }
     };
-
     updateMetaTag(
       "og:url",
       "https://trinityrcmsolution.com/services/paymentPosting"
     );
     updateMetaTag(
-      "og:title",
-      "Payment Posting & Reconciliation Services - Trinity RCM Solution"
-    );
-    updateMetaTag(
-      "og:description",
-      "Automated payment posting and reconciliation services for faster payment processing."
-    );
-    updateMetaTag("og:image", "https://trinityrcmsolution.com/logo.png");
-    updateMetaTag("og:image:width", "1200");
-    updateMetaTag("og:image:height", "630");
-    updateMetaTag("og:image:alt", "Trinity RCM Solution - Payment Posting");
-
-    updateMetaTag("twitter:card", "summary_large_image");
-    updateMetaTag(
       "twitter:url",
       "https://trinityrcmsolution.com/services/paymentPosting"
     );
-    updateMetaTag(
-      "twitter:title",
-      "Payment Posting & Reconciliation Services - Trinity RCM Solution"
-    );
-    updateMetaTag(
-      "twitter:description",
-      "Automated payment posting and reconciliation services for faster payment processing."
-    );
-    updateMetaTag("twitter:image", "https://trinityrcmsolution.com/logo.png");
   }, []);
 
   const benefits = [

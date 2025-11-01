@@ -10,45 +10,35 @@ import {
 } from "lucide-react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { updateSEO } from "../../utils/seo";
 
 const ARManagementPage: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title =
-      "Accounts Receivable (A/R) Management Services - Trinity RCM Solution";
 
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Comprehensive A/R management services to reduce outstanding receivables, improve cash flow, and accelerate collections. Expert follow-up and aging analysis."
-      );
-    } else {
-      metaDescription = document.createElement("meta");
-      metaDescription.setAttribute("name", "description");
-      metaDescription.setAttribute(
-        "content",
-        "Comprehensive A/R management services to reduce outstanding receivables, improve cash flow, and accelerate collections. Expert follow-up and aging analysis."
-      );
-      document.head.appendChild(metaDescription);
-    }
+    // Update SEO meta tags
+    updateSEO({
+      title:
+        "Accounts Receivable (A/R) Management Services - Trinity RCM Solution",
+      description:
+        "Comprehensive A/R management services to reduce outstanding receivables, improve cash flow, and accelerate collections. Expert follow-up and aging analysis.",
+      canonical: "https://trinityrcmsolution.com/services/arManagement",
+      ogTitle:
+        "Accounts Receivable (A/R) Management Services - Trinity RCM Solution",
+      ogDescription:
+        "Comprehensive A/R management services to reduce outstanding receivables, improve cash flow, and accelerate collections.",
+      ogImage: "https://trinityrcmsolution.com/logo.png",
+      ogImageWidth: "1200",
+      ogImageHeight: "630",
+      ogImageAlt: "Trinity RCM Solution - A/R Management",
+      twitterTitle:
+        "Accounts Receivable (A/R) Management Services - Trinity RCM Solution",
+      twitterDescription:
+        "Comprehensive A/R management services to reduce outstanding receivables, improve cash flow, and accelerate collections.",
+      twitterImage: "https://trinityrcmsolution.com/logo.png",
+    });
 
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (canonical) {
-      canonical.setAttribute(
-        "href",
-        "https://trinityrcmsolution.com/services/arManagement"
-      );
-    } else {
-      canonical = document.createElement("link");
-      canonical.setAttribute("rel", "canonical");
-      canonical.setAttribute(
-        "href",
-        "https://trinityrcmsolution.com/services/arManagement"
-      );
-      document.head.appendChild(canonical);
-    }
-
+    // Update OG and Twitter URL
     const updateMetaTag = (property: string, content: string) => {
       let meta = document.querySelector(`meta[property="${property}"]`);
       if (meta) {
@@ -60,38 +50,14 @@ const ARManagementPage: React.FC = () => {
         document.head.appendChild(meta);
       }
     };
-
     updateMetaTag(
       "og:url",
       "https://trinityrcmsolution.com/services/arManagement"
     );
     updateMetaTag(
-      "og:title",
-      "Accounts Receivable (A/R) Management Services - Trinity RCM Solution"
-    );
-    updateMetaTag(
-      "og:description",
-      "Comprehensive A/R management services to reduce outstanding receivables, improve cash flow, and accelerate collections."
-    );
-    updateMetaTag("og:image", "https://trinityrcmsolution.com/logo.png");
-    updateMetaTag("og:image:width", "1200");
-    updateMetaTag("og:image:height", "630");
-    updateMetaTag("og:image:alt", "Trinity RCM Solution - A/R Management");
-
-    updateMetaTag("twitter:card", "summary_large_image");
-    updateMetaTag(
       "twitter:url",
       "https://trinityrcmsolution.com/services/arManagement"
     );
-    updateMetaTag(
-      "twitter:title",
-      "Accounts Receivable (A/R) Management Services - Trinity RCM Solution"
-    );
-    updateMetaTag(
-      "twitter:description",
-      "Comprehensive A/R management services to reduce outstanding receivables, improve cash flow, and accelerate collections."
-    );
-    updateMetaTag("twitter:image", "https://trinityrcmsolution.com/logo.png");
   }, []);
 
   const benefits = [

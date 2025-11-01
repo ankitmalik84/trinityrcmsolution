@@ -2,45 +2,34 @@ import React, { useEffect } from "react";
 import Header from "../components/Header";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import { updateSEO } from "../utils/seo";
 
 const ContactPage: React.FC = () => {
   useEffect(() => {
     // Scroll to top on mount
     window.scrollTo(0, 0);
 
-    // Update document title
-    document.title =
-      "Contact Us - Trinity RCM Solution | Get Your Free RCM Audit";
+    // Update SEO meta tags
+    updateSEO({
+      title: "Contact Us - Trinity RCM Solution | Get Your Free RCM Audit",
+      description:
+        "Contact Trinity RCM Solution for expert healthcare revenue cycle management services. Get a free RCM audit and consultation. Located in Bangalore and Gurugram, India.",
+      canonical: "https://trinityrcmsolution.com/contact",
+      ogTitle: "Contact Us - Trinity RCM Solution | Get Your Free RCM Audit",
+      ogDescription:
+        "Contact Trinity RCM Solution for expert healthcare revenue cycle management services. Get a free RCM audit and consultation.",
+      ogImage: "https://trinityrcmsolution.com/logo.png",
+      ogImageWidth: "1200",
+      ogImageHeight: "630",
+      ogImageAlt: "Trinity RCM Solution - Contact Us",
+      twitterTitle:
+        "Contact Us - Trinity RCM Solution | Get Your Free RCM Audit",
+      twitterDescription:
+        "Contact Trinity RCM Solution for expert healthcare revenue cycle management services. Get a free RCM audit and consultation.",
+      twitterImage: "https://trinityrcmsolution.com/logo.png",
+    });
 
-    // Update meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Contact Trinity RCM Solution for expert healthcare revenue cycle management services. Get a free RCM audit and consultation. Located in Bangalore and Gurugram, India."
-      );
-    } else {
-      metaDescription = document.createElement("meta");
-      metaDescription.setAttribute("name", "description");
-      metaDescription.setAttribute(
-        "content",
-        "Contact Trinity RCM Solution for expert healthcare revenue cycle management services. Get a free RCM audit and consultation. Located in Bangalore and Gurugram, India."
-      );
-      document.head.appendChild(metaDescription);
-    }
-
-    // Update canonical URL
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (canonical) {
-      canonical.setAttribute("href", "https://trinityrcmsolution.com/contact");
-    } else {
-      canonical = document.createElement("link");
-      canonical.setAttribute("rel", "canonical");
-      canonical.setAttribute("href", "https://trinityrcmsolution.com/contact");
-      document.head.appendChild(canonical);
-    }
-
-    // Update OG tags
+    // Update OG and Twitter URL
     const updateMetaTag = (property: string, content: string) => {
       let meta = document.querySelector(`meta[property="${property}"]`);
       if (meta) {
@@ -52,32 +41,8 @@ const ContactPage: React.FC = () => {
         document.head.appendChild(meta);
       }
     };
-
     updateMetaTag("og:url", "https://trinityrcmsolution.com/contact");
-    updateMetaTag(
-      "og:title",
-      "Contact Us - Trinity RCM Solution | Get Your Free RCM Audit"
-    );
-    updateMetaTag(
-      "og:description",
-      "Contact Trinity RCM Solution for expert healthcare revenue cycle management services. Get a free RCM audit and consultation."
-    );
-    updateMetaTag("og:image", "https://trinityrcmsolution.com/logo.png");
-    updateMetaTag("og:image:width", "1200");
-    updateMetaTag("og:image:height", "630");
-    updateMetaTag("og:image:alt", "Trinity RCM Solution - Contact Us");
-
-    // Update Twitter tags
     updateMetaTag("twitter:url", "https://trinityrcmsolution.com/contact");
-    updateMetaTag(
-      "twitter:title",
-      "Contact Us - Trinity RCM Solution | Get Your Free RCM Audit"
-    );
-    updateMetaTag(
-      "twitter:description",
-      "Contact Trinity RCM Solution for expert healthcare revenue cycle management services. Get a free RCM audit and consultation."
-    );
-    updateMetaTag("twitter:image", "https://trinityrcmsolution.com/logo.png");
   }, []);
 
   return (

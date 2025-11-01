@@ -10,45 +10,33 @@ import {
 } from "lucide-react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { updateSEO } from "../../utils/seo";
 
 const RevenueCycleManagementPage: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
 
-    document.title = "Revenue Cycle Management Services - Trinity RCM Solution";
+    // Update SEO meta tags
+    updateSEO({
+      title: "Revenue Cycle Management Services - Trinity RCM Solution",
+      description:
+        "Comprehensive Revenue Cycle Management services to optimize your healthcare practice's financial performance. End-to-end RCM solutions including billing, coding, A/R management, and more.",
+      canonical:
+        "https://trinityrcmsolution.com/services/revenueCycleManagement",
+      ogTitle: "Revenue Cycle Management Services - Trinity RCM Solution",
+      ogDescription:
+        "Comprehensive Revenue Cycle Management services to optimize your healthcare practice's financial performance.",
+      ogImage: "https://trinityrcmsolution.com/logo.png",
+      ogImageWidth: "1200",
+      ogImageHeight: "630",
+      ogImageAlt: "Trinity RCM Solution - Revenue Cycle Management",
+      twitterTitle: "Revenue Cycle Management Services - Trinity RCM Solution",
+      twitterDescription:
+        "Comprehensive Revenue Cycle Management services to optimize your healthcare practice's financial performance.",
+      twitterImage: "https://trinityrcmsolution.com/logo.png",
+    });
 
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Comprehensive Revenue Cycle Management services to optimize your healthcare practice's financial performance. End-to-end RCM solutions including billing, coding, A/R management, and more."
-      );
-    } else {
-      metaDescription = document.createElement("meta");
-      metaDescription.setAttribute("name", "description");
-      metaDescription.setAttribute(
-        "content",
-        "Comprehensive Revenue Cycle Management services to optimize your healthcare practice's financial performance. End-to-end RCM solutions including billing, coding, A/R management, and more."
-      );
-      document.head.appendChild(metaDescription);
-    }
-
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (canonical) {
-      canonical.setAttribute(
-        "href",
-        "https://trinityrcmsolution.com/services/revenueCycleManagement"
-      );
-    } else {
-      canonical = document.createElement("link");
-      canonical.setAttribute("rel", "canonical");
-      canonical.setAttribute(
-        "href",
-        "https://trinityrcmsolution.com/services/revenueCycleManagement"
-      );
-      document.head.appendChild(canonical);
-    }
-
+    // Update OG and Twitter URL
     const updateMetaTag = (property: string, content: string) => {
       let meta = document.querySelector(`meta[property="${property}"]`);
       if (meta) {
@@ -60,40 +48,14 @@ const RevenueCycleManagementPage: React.FC = () => {
         document.head.appendChild(meta);
       }
     };
-
     updateMetaTag(
       "og:url",
       "https://trinityrcmsolution.com/services/revenueCycleManagement"
     );
     updateMetaTag(
-      "og:title",
-      "Revenue Cycle Management Services - Trinity RCM Solution"
-    );
-    updateMetaTag(
-      "og:description",
-      "Comprehensive Revenue Cycle Management services to optimize your healthcare practice's financial performance."
-    );
-    updateMetaTag("og:image", "https://trinityrcmsolution.com/logo.png");
-    updateMetaTag("og:image:width", "1200");
-    updateMetaTag("og:image:height", "630");
-    updateMetaTag(
-      "og:image:alt",
-      "Trinity RCM Solution - Revenue Cycle Management"
-    );
-
-    updateMetaTag(
       "twitter:url",
       "https://trinityrcmsolution.com/services/revenueCycleManagement"
     );
-    updateMetaTag(
-      "twitter:title",
-      "Revenue Cycle Management Services - Trinity RCM Solution"
-    );
-    updateMetaTag(
-      "twitter:description",
-      "Comprehensive Revenue Cycle Management services to optimize your healthcare practice's financial performance."
-    );
-    updateMetaTag("twitter:image", "https://trinityrcmsolution.com/logo.png");
   }, []);
 
   const benefits = [
