@@ -16,13 +16,13 @@ const InsuranceVerificationPage: React.FC = () => {
         "Insurance Verification & Eligibility Services - Trinity RCM Solution",
       description:
         "Real-time insurance verification and eligibility checks to confirm patient coverage before treatment. Reduce denials and improve cash flow.",
-      canonical:
-        "https://trinityrcmsolution.com/services/insuranceVerification",
+      canonical: "/services/insuranceVerification", // Will be converted to full URL automatically
       ogTitle:
         "Insurance Verification & Eligibility Services - Trinity RCM Solution",
       ogDescription:
         "Real-time insurance verification and eligibility checks to confirm patient coverage before treatment.",
-      ogImage: "https://trinityrcmsolution.com/logo.png",
+      ogUrl: "/services/insuranceVerification", // Will be converted to full URL automatically
+      ogImage: "/logo.png", // Will be converted to full URL automatically
       ogImageWidth: "1200",
       ogImageHeight: "630",
       ogImageAlt: "Trinity RCM Solution - Insurance Verification",
@@ -30,29 +30,9 @@ const InsuranceVerificationPage: React.FC = () => {
         "Insurance Verification & Eligibility Services - Trinity RCM Solution",
       twitterDescription:
         "Real-time insurance verification and eligibility checks to confirm patient coverage before treatment.",
-      twitterImage: "https://trinityrcmsolution.com/logo.png",
+      twitterUrl: "/services/insuranceVerification", // Will be converted to full URL automatically
+      twitterImage: "/logo.png", // Will be converted to full URL automatically
     });
-
-    // Update OG and Twitter URL
-    const updateMetaTag = (property: string, content: string) => {
-      let meta = document.querySelector(`meta[property="${property}"]`);
-      if (meta) {
-        meta.setAttribute("content", content);
-      } else {
-        meta = document.createElement("meta");
-        meta.setAttribute("property", property);
-        meta.setAttribute("content", content);
-        document.head.appendChild(meta);
-      }
-    };
-    updateMetaTag(
-      "og:url",
-      "https://trinityrcmsolution.com/services/insuranceVerification"
-    );
-    updateMetaTag(
-      "twitter:url",
-      "https://trinityrcmsolution.com/services/insuranceVerification"
-    );
   }, []);
 
   const benefits = [

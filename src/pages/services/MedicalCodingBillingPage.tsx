@@ -23,40 +23,21 @@ const MedicalCodingBillingPage: React.FC = () => {
       title: "Medical Coding & Billing Services - Trinity RCM Solution",
       description:
         "Expert medical coding and billing services using CPT, ICD-10, and HCPCS codes. Accurate coding for maximum reimbursement and faster claim processing.",
-      canonical: "https://trinityrcmsolution.com/services/medicalCodingBilling",
+      canonical: "/services/medicalCodingBilling", // Will be converted to full URL automatically
       ogTitle: "Medical Coding & Billing Services - Trinity RCM Solution",
       ogDescription:
         "Expert medical coding and billing services using CPT, ICD-10, and HCPCS codes. Accurate coding for maximum reimbursement.",
-      ogImage: "https://trinityrcmsolution.com/logo.png",
+      ogUrl: "/services/medicalCodingBilling", // Will be converted to full URL automatically
+      ogImage: "/logo.png", // Will be converted to full URL automatically
       ogImageWidth: "1200",
       ogImageHeight: "630",
       ogImageAlt: "Trinity RCM Solution - Medical Coding & Billing",
       twitterTitle: "Medical Coding & Billing Services - Trinity RCM Solution",
       twitterDescription:
         "Expert medical coding and billing services using CPT, ICD-10, and HCPCS codes. Accurate coding for maximum reimbursement.",
-      twitterImage: "https://trinityrcmsolution.com/logo.png",
+      twitterUrl: "/services/medicalCodingBilling", // Will be converted to full URL automatically
+      twitterImage: "/logo.png", // Will be converted to full URL automatically
     });
-
-    // Update OG and Twitter URL
-    const updateMetaTag = (property: string, content: string) => {
-      let meta = document.querySelector(`meta[property="${property}"]`);
-      if (meta) {
-        meta.setAttribute("content", content);
-      } else {
-        meta = document.createElement("meta");
-        meta.setAttribute("property", property);
-        meta.setAttribute("content", content);
-        document.head.appendChild(meta);
-      }
-    };
-    updateMetaTag(
-      "og:url",
-      "https://trinityrcmsolution.com/services/medicalCodingBilling"
-    );
-    updateMetaTag(
-      "twitter:url",
-      "https://trinityrcmsolution.com/services/medicalCodingBilling"
-    );
   }, []);
 
   const codeTypes = [

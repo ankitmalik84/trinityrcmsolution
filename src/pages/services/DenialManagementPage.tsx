@@ -21,11 +21,12 @@ const DenialManagementPage: React.FC = () => {
       title: "Denial Management & Appeals Services - Trinity RCM Solution",
       description:
         "Expert denial management and appeals services to recover denied claims and reduce future denials. Increase revenue recovery with strategic appeals process.",
-      canonical: "https://trinityrcmsolution.com/services/denialManagement",
+      canonical: "/services/denialManagement", // Will be converted to full URL automatically
       ogTitle: "Denial Management & Appeals Services - Trinity RCM Solution",
       ogDescription:
         "Expert denial management and appeals services to recover denied claims and reduce future denials.",
-      ogImage: "https://trinityrcmsolution.com/logo.png",
+      ogUrl: "/services/denialManagement", // Will be converted to full URL automatically
+      ogImage: "/logo.png", // Will be converted to full URL automatically
       ogImageWidth: "1200",
       ogImageHeight: "630",
       ogImageAlt: "Trinity RCM Solution - Denial Management",
@@ -33,29 +34,9 @@ const DenialManagementPage: React.FC = () => {
         "Denial Management & Appeals Services - Trinity RCM Solution",
       twitterDescription:
         "Expert denial management and appeals services to recover denied claims and reduce future denials.",
-      twitterImage: "https://trinityrcmsolution.com/logo.png",
+      twitterUrl: "/services/denialManagement", // Will be converted to full URL automatically
+      twitterImage: "/logo.png", // Will be converted to full URL automatically
     });
-
-    // Update OG and Twitter URL
-    const updateMetaTag = (property: string, content: string) => {
-      let meta = document.querySelector(`meta[property="${property}"]`);
-      if (meta) {
-        meta.setAttribute("content", content);
-      } else {
-        meta = document.createElement("meta");
-        meta.setAttribute("property", property);
-        meta.setAttribute("content", content);
-        document.head.appendChild(meta);
-      }
-    };
-    updateMetaTag(
-      "og:url",
-      "https://trinityrcmsolution.com/services/denialManagement"
-    );
-    updateMetaTag(
-      "twitter:url",
-      "https://trinityrcmsolution.com/services/denialManagement"
-    );
   }, []);
 
   const benefits = [

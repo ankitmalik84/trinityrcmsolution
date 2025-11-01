@@ -22,12 +22,13 @@ const ARManagementPage: React.FC = () => {
         "Accounts Receivable (A/R) Management Services - Trinity RCM Solution",
       description:
         "Comprehensive A/R management services to reduce outstanding receivables, improve cash flow, and accelerate collections. Expert follow-up and aging analysis.",
-      canonical: "https://trinityrcmsolution.com/services/arManagement",
+      canonical: "/services/arManagement", // Will be converted to full URL automatically
       ogTitle:
         "Accounts Receivable (A/R) Management Services - Trinity RCM Solution",
       ogDescription:
         "Comprehensive A/R management services to reduce outstanding receivables, improve cash flow, and accelerate collections.",
-      ogImage: "https://trinityrcmsolution.com/logo.png",
+      ogUrl: "/services/arManagement", // Will be converted to full URL automatically
+      ogImage: "/logo.png", // Will be converted to full URL automatically
       ogImageWidth: "1200",
       ogImageHeight: "630",
       ogImageAlt: "Trinity RCM Solution - A/R Management",
@@ -35,29 +36,9 @@ const ARManagementPage: React.FC = () => {
         "Accounts Receivable (A/R) Management Services - Trinity RCM Solution",
       twitterDescription:
         "Comprehensive A/R management services to reduce outstanding receivables, improve cash flow, and accelerate collections.",
-      twitterImage: "https://trinityrcmsolution.com/logo.png",
+      twitterUrl: "/services/arManagement", // Will be converted to full URL automatically
+      twitterImage: "/logo.png", // Will be converted to full URL automatically
     });
-
-    // Update OG and Twitter URL
-    const updateMetaTag = (property: string, content: string) => {
-      let meta = document.querySelector(`meta[property="${property}"]`);
-      if (meta) {
-        meta.setAttribute("content", content);
-      } else {
-        meta = document.createElement("meta");
-        meta.setAttribute("property", property);
-        meta.setAttribute("content", content);
-        document.head.appendChild(meta);
-      }
-    };
-    updateMetaTag(
-      "og:url",
-      "https://trinityrcmsolution.com/services/arManagement"
-    );
-    updateMetaTag(
-      "twitter:url",
-      "https://trinityrcmsolution.com/services/arManagement"
-    );
   }, []);
 
   const benefits = [

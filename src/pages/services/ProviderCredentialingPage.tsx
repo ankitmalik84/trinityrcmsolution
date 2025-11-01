@@ -16,13 +16,13 @@ const ProviderCredentialingPage: React.FC = () => {
         "Provider Credentialing & Enrollment Services - Trinity RCM Solution",
       description:
         "Expert provider credentialing and payer enrollment services. Fast, efficient enrollment with insurance networks to get providers credentialed quickly.",
-      canonical:
-        "https://trinityrcmsolution.com/services/providerCredentialing",
+      canonical: "/services/providerCredentialing", // Will be converted to full URL automatically
       ogTitle:
         "Provider Credentialing & Enrollment Services - Trinity RCM Solution",
       ogDescription:
         "Expert provider credentialing and payer enrollment services. Fast, efficient enrollment with insurance networks.",
-      ogImage: "https://trinityrcmsolution.com/logo.png",
+      ogUrl: "/services/providerCredentialing", // Will be converted to full URL automatically
+      ogImage: "/logo.png", // Will be converted to full URL automatically
       ogImageWidth: "1200",
       ogImageHeight: "630",
       ogImageAlt: "Trinity RCM Solution - Provider Credentialing",
@@ -30,29 +30,9 @@ const ProviderCredentialingPage: React.FC = () => {
         "Provider Credentialing & Enrollment Services - Trinity RCM Solution",
       twitterDescription:
         "Expert provider credentialing and payer enrollment services. Fast, efficient enrollment with insurance networks.",
-      twitterImage: "https://trinityrcmsolution.com/logo.png",
+      twitterUrl: "/services/providerCredentialing", // Will be converted to full URL automatically
+      twitterImage: "/logo.png", // Will be converted to full URL automatically
     });
-
-    // Update OG and Twitter URL
-    const updateMetaTag = (property: string, content: string) => {
-      let meta = document.querySelector(`meta[property="${property}"]`);
-      if (meta) {
-        meta.setAttribute("content", content);
-      } else {
-        meta = document.createElement("meta");
-        meta.setAttribute("property", property);
-        meta.setAttribute("content", content);
-        document.head.appendChild(meta);
-      }
-    };
-    updateMetaTag(
-      "og:url",
-      "https://trinityrcmsolution.com/services/providerCredentialing"
-    );
-    updateMetaTag(
-      "twitter:url",
-      "https://trinityrcmsolution.com/services/providerCredentialing"
-    );
   }, []);
 
   const benefits = [

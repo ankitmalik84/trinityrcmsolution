@@ -21,12 +21,13 @@ const PaymentPostingPage: React.FC = () => {
       title: "Payment Posting & Reconciliation Services - Trinity RCM Solution",
       description:
         "Automated payment posting and reconciliation services for faster payment processing. EFT posting, deposit reconciliation, and accurate payment tracking.",
-      canonical: "https://trinityrcmsolution.com/services/paymentPosting",
+      canonical: "/services/paymentPosting", // Will be converted to full URL automatically
       ogTitle:
         "Payment Posting & Reconciliation Services - Trinity RCM Solution",
       ogDescription:
         "Automated payment posting and reconciliation services for faster payment processing.",
-      ogImage: "https://trinityrcmsolution.com/logo.png",
+      ogUrl: "/services/paymentPosting", // Will be converted to full URL automatically
+      ogImage: "/logo.png", // Will be converted to full URL automatically
       ogImageWidth: "1200",
       ogImageHeight: "630",
       ogImageAlt: "Trinity RCM Solution - Payment Posting",
@@ -34,29 +35,9 @@ const PaymentPostingPage: React.FC = () => {
         "Payment Posting & Reconciliation Services - Trinity RCM Solution",
       twitterDescription:
         "Automated payment posting and reconciliation services for faster payment processing.",
-      twitterImage: "https://trinityrcmsolution.com/logo.png",
+      twitterUrl: "/services/paymentPosting", // Will be converted to full URL automatically
+      twitterImage: "/logo.png", // Will be converted to full URL automatically
     });
-
-    // Update OG and Twitter URL
-    const updateMetaTag = (property: string, content: string) => {
-      let meta = document.querySelector(`meta[property="${property}"]`);
-      if (meta) {
-        meta.setAttribute("content", content);
-      } else {
-        meta = document.createElement("meta");
-        meta.setAttribute("property", property);
-        meta.setAttribute("content", content);
-        document.head.appendChild(meta);
-      }
-    };
-    updateMetaTag(
-      "og:url",
-      "https://trinityrcmsolution.com/services/paymentPosting"
-    );
-    updateMetaTag(
-      "twitter:url",
-      "https://trinityrcmsolution.com/services/paymentPosting"
-    );
   }, []);
 
   const benefits = [

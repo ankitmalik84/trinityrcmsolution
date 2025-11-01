@@ -15,11 +15,12 @@ const PriorAuthorizationPage: React.FC = () => {
       title: "Prior Authorization Management Services - Trinity RCM Solution",
       description:
         "Expert prior authorization services to secure approvals before treatment. Fast turnaround times and high approval rates for procedures and medications.",
-      canonical: "https://trinityrcmsolution.com/services/priorAuthorization",
+      canonical: "/services/priorAuthorization", // Will be converted to full URL automatically
       ogTitle: "Prior Authorization Management Services - Trinity RCM Solution",
       ogDescription:
         "Expert prior authorization services to secure approvals before treatment. Fast turnaround times and high approval rates.",
-      ogImage: "https://trinityrcmsolution.com/logo.png",
+      ogUrl: "/services/priorAuthorization", // Will be converted to full URL automatically
+      ogImage: "/logo.png", // Will be converted to full URL automatically
       ogImageWidth: "1200",
       ogImageHeight: "630",
       ogImageAlt: "Trinity RCM Solution - Prior Authorization",
@@ -27,29 +28,9 @@ const PriorAuthorizationPage: React.FC = () => {
         "Prior Authorization Management Services - Trinity RCM Solution",
       twitterDescription:
         "Expert prior authorization services to secure approvals before treatment. Fast turnaround times and high approval rates.",
-      twitterImage: "https://trinityrcmsolution.com/logo.png",
+      twitterUrl: "/services/priorAuthorization", // Will be converted to full URL automatically
+      twitterImage: "/logo.png", // Will be converted to full URL automatically
     });
-
-    // Update OG and Twitter URL
-    const updateMetaTag = (property: string, content: string) => {
-      let meta = document.querySelector(`meta[property="${property}"]`);
-      if (meta) {
-        meta.setAttribute("content", content);
-      } else {
-        meta = document.createElement("meta");
-        meta.setAttribute("property", property);
-        meta.setAttribute("content", content);
-        document.head.appendChild(meta);
-      }
-    };
-    updateMetaTag(
-      "og:url",
-      "https://trinityrcmsolution.com/services/priorAuthorization"
-    );
-    updateMetaTag(
-      "twitter:url",
-      "https://trinityrcmsolution.com/services/priorAuthorization"
-    );
   }, []);
 
   const benefits = [

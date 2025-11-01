@@ -21,41 +21,21 @@ const RevenueCycleManagementPage: React.FC = () => {
       title: "Revenue Cycle Management Services - Trinity RCM Solution",
       description:
         "Comprehensive Revenue Cycle Management services to optimize your healthcare practice's financial performance. End-to-end RCM solutions including billing, coding, A/R management, and more.",
-      canonical:
-        "https://trinityrcmsolution.com/services/revenueCycleManagement",
+      canonical: "/services/revenueCycleManagement", // Will be converted to full URL automatically
       ogTitle: "Revenue Cycle Management Services - Trinity RCM Solution",
       ogDescription:
         "Comprehensive Revenue Cycle Management services to optimize your healthcare practice's financial performance.",
-      ogImage: "https://trinityrcmsolution.com/logo.png",
+      ogUrl: "/services/revenueCycleManagement", // Will be converted to full URL automatically
+      ogImage: "/logo.png", // Will be converted to full URL automatically
       ogImageWidth: "1200",
       ogImageHeight: "630",
       ogImageAlt: "Trinity RCM Solution - Revenue Cycle Management",
       twitterTitle: "Revenue Cycle Management Services - Trinity RCM Solution",
       twitterDescription:
         "Comprehensive Revenue Cycle Management services to optimize your healthcare practice's financial performance.",
-      twitterImage: "https://trinityrcmsolution.com/logo.png",
+      twitterUrl: "/services/revenueCycleManagement", // Will be converted to full URL automatically
+      twitterImage: "/logo.png", // Will be converted to full URL automatically
     });
-
-    // Update OG and Twitter URL
-    const updateMetaTag = (property: string, content: string) => {
-      let meta = document.querySelector(`meta[property="${property}"]`);
-      if (meta) {
-        meta.setAttribute("content", content);
-      } else {
-        meta = document.createElement("meta");
-        meta.setAttribute("property", property);
-        meta.setAttribute("content", content);
-        document.head.appendChild(meta);
-      }
-    };
-    updateMetaTag(
-      "og:url",
-      "https://trinityrcmsolution.com/services/revenueCycleManagement"
-    );
-    updateMetaTag(
-      "twitter:url",
-      "https://trinityrcmsolution.com/services/revenueCycleManagement"
-    );
   }, []);
 
   const benefits = [

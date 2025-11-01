@@ -14,11 +14,12 @@ const ContactPage: React.FC = () => {
       title: "Contact Us - Trinity RCM Solution | Get Your Free RCM Audit",
       description:
         "Contact Trinity RCM Solution for expert healthcare revenue cycle management services. Get a free RCM audit and consultation. Located in Bangalore and Gurugram, India.",
-      canonical: "https://trinityrcmsolution.com/contact",
+      canonical: "/contact", // Will be converted to full URL automatically
       ogTitle: "Contact Us - Trinity RCM Solution | Get Your Free RCM Audit",
       ogDescription:
         "Contact Trinity RCM Solution for expert healthcare revenue cycle management services. Get a free RCM audit and consultation.",
-      ogImage: "https://trinityrcmsolution.com/logo.png",
+      ogUrl: "/contact", // Will be converted to full URL automatically
+      ogImage: "/logo.png", // Will be converted to full URL automatically
       ogImageWidth: "1200",
       ogImageHeight: "630",
       ogImageAlt: "Trinity RCM Solution - Contact Us",
@@ -26,23 +27,9 @@ const ContactPage: React.FC = () => {
         "Contact Us - Trinity RCM Solution | Get Your Free RCM Audit",
       twitterDescription:
         "Contact Trinity RCM Solution for expert healthcare revenue cycle management services. Get a free RCM audit and consultation.",
-      twitterImage: "https://trinityrcmsolution.com/logo.png",
+      twitterUrl: "/contact", // Will be converted to full URL automatically
+      twitterImage: "/logo.png", // Will be converted to full URL automatically
     });
-
-    // Update OG and Twitter URL
-    const updateMetaTag = (property: string, content: string) => {
-      let meta = document.querySelector(`meta[property="${property}"]`);
-      if (meta) {
-        meta.setAttribute("content", content);
-      } else {
-        meta = document.createElement("meta");
-        meta.setAttribute("property", property);
-        meta.setAttribute("content", content);
-        document.head.appendChild(meta);
-      }
-    };
-    updateMetaTag("og:url", "https://trinityrcmsolution.com/contact");
-    updateMetaTag("twitter:url", "https://trinityrcmsolution.com/contact");
   }, []);
 
   return (

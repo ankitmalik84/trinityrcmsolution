@@ -17,12 +17,12 @@ const HomePage: React.FC = () => {
         "Trinity RCM Solution - Healthcare Revenue Cycle Management Services",
       description:
         "Leading healthcare RCM solution provider offering dental and medical billing, coding, credentialing, and revenue cycle management services. Free RCM audit available.",
-      canonical: "https://trinityrcmsolution.com/",
+      canonical: "/", // Will be converted to full URL automatically
       ogTitle: "Trinity RCM Solution - Healthcare Revenue Cycle Management",
       ogDescription:
         "Leading healthcare RCM solution provider offering dental and medical billing, coding, credentialing, and revenue cycle management services.",
-      ogUrl: "https://trinityrcmsolution.com/",
-      ogImage: "https://trinityrcmsolution.com/logo.png",
+      ogUrl: "/", // Will be converted to full URL automatically
+      ogImage: "/logo.png", // Will be converted to full URL automatically
       ogImageWidth: "1200",
       ogImageHeight: "630",
       ogImageAlt: "Trinity RCM Solution - Healthcare Revenue Cycle Management",
@@ -30,8 +30,8 @@ const HomePage: React.FC = () => {
         "Trinity RCM Solution - Healthcare Revenue Cycle Management",
       twitterDescription:
         "Leading healthcare RCM solution provider offering dental and medical billing, coding, credentialing, and revenue cycle management services.",
-      twitterUrl: "https://trinityrcmsolution.com/",
-      twitterImage: "https://trinityrcmsolution.com/logo.png",
+      twitterUrl: "/", // Will be converted to full URL automatically
+      twitterImage: "/logo.png", // Will be converted to full URL automatically
     });
   }, []);
 

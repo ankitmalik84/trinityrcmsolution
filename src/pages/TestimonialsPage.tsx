@@ -14,11 +14,12 @@ const TestimonialsPage: React.FC = () => {
       title: "Client Testimonials - Trinity RCM Solution | Success Stories",
       description:
         "Read testimonials from satisfied clients of Trinity RCM Solution. Discover how we've helped dental and medical practices improve their revenue cycle management with our expert billing and credentialing services.",
-      canonical: "https://trinityrcmsolution.com/testimonials",
+      canonical: "/testimonials", // Will be converted to full URL automatically
       ogTitle: "Client Testimonials - Trinity RCM Solution | Success Stories",
       ogDescription:
         "Read testimonials from satisfied clients of Trinity RCM Solution. Discover how we've helped dental and medical practices improve their revenue cycle management.",
-      ogImage: "https://trinityrcmsolution.com/logo.png",
+      ogUrl: "/testimonials", // Will be converted to full URL automatically
+      ogImage: "/logo.png", // Will be converted to full URL automatically
       ogImageWidth: "1200",
       ogImageHeight: "630",
       ogImageAlt: "Trinity RCM Solution - Client Testimonials",
@@ -26,23 +27,9 @@ const TestimonialsPage: React.FC = () => {
         "Client Testimonials - Trinity RCM Solution | Success Stories",
       twitterDescription:
         "Read testimonials from satisfied clients of Trinity RCM Solution. Discover how we've helped dental and medical practices improve their revenue cycle management.",
-      twitterImage: "https://trinityrcmsolution.com/logo.png",
+      twitterUrl: "/testimonials", // Will be converted to full URL automatically
+      twitterImage: "/logo.png", // Will be converted to full URL automatically
     });
-
-    // Update OG and Twitter URL
-    const updateMetaTag = (property: string, content: string) => {
-      let meta = document.querySelector(`meta[property="${property}"]`);
-      if (meta) {
-        meta.setAttribute("content", content);
-      } else {
-        meta = document.createElement("meta");
-        meta.setAttribute("property", property);
-        meta.setAttribute("content", content);
-        document.head.appendChild(meta);
-      }
-    };
-    updateMetaTag("og:url", "https://trinityrcmsolution.com/testimonials");
-    updateMetaTag("twitter:url", "https://trinityrcmsolution.com/testimonials");
   }, []);
 
   return (
