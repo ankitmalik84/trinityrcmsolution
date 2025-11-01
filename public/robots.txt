@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://trinityrcmsolution.com/sitemap.xml
+
+# Disallow crawling of admin or private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+# Allow crawling of all public content
+Allow: /
+Allow: /#about
+Allow: /#solution
+Allow: /#specialties
+Allow: /#testimonials
+Allow: /#contact
