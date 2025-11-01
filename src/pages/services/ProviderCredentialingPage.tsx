@@ -67,7 +67,7 @@ const ProviderCredentialingPage: React.FC = () => {
       "og:description",
       "Expert provider credentialing and payer enrollment services. Fast, efficient enrollment with insurance networks."
     );
-    updateMetaTag("og:image", "https://trinityrcmsolution.com/logo.jpeg");
+    updateMetaTag("og:image", "https://trinityrcmsolution.com/logo.png");
     updateMetaTag("og:image:width", "1200");
     updateMetaTag("og:image:height", "630");
     updateMetaTag(
@@ -88,7 +88,7 @@ const ProviderCredentialingPage: React.FC = () => {
       "twitter:description",
       "Expert provider credentialing and payer enrollment services. Fast, efficient enrollment with insurance networks."
     );
-    updateMetaTag("twitter:image", "https://trinityrcmsolution.com/logo.jpeg");
+    updateMetaTag("twitter:image", "https://trinityrcmsolution.com/logo.png");
   }, []);
 
   const benefits = [

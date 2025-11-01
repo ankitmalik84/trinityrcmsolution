@@ -73,7 +73,7 @@ const DenialManagementPage: React.FC = () => {
       "og:description",
       "Expert denial management and appeals services to recover denied claims and reduce future denials."
     );
-    updateMetaTag("og:image", "https://trinityrcmsolution.com/logo.jpeg");
+    updateMetaTag("og:image", "https://trinityrcmsolution.com/logo.png");
     updateMetaTag("og:image:width", "1200");
     updateMetaTag("og:image:height", "630");
     updateMetaTag("og:image:alt", "Trinity RCM Solution - Denial Management");
@@ -91,7 +91,7 @@ const DenialManagementPage: React.FC = () => {
       "twitter:description",
       "Expert denial management and appeals services to recover denied claims and reduce future denials."
     );
-    updateMetaTag("twitter:image", "https://trinityrcmsolution.com/logo.jpeg");
+    updateMetaTag("twitter:image", "https://trinityrcmsolution.com/logo.png");
   }, []);
 
   const benefits = [

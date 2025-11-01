@@ -175,7 +175,7 @@ const Header: React.FC = () => {
                 transition={{ duration: 0.5 }}
               >
                 <img
-                  src="/logo.jpeg"
+                  src="/logo.png"
                   alt="Trinity RCM Solution Logo"
                   className="w-full h-full object-cover"
                 />

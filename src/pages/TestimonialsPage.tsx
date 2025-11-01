@@ -68,7 +68,7 @@ const TestimonialsPage: React.FC = () => {
       "og:description",
       "Read testimonials from satisfied clients of Trinity RCM Solution. Discover how we've helped dental and medical practices improve their revenue cycle management."
     );
-    updateMetaTag("og:image", "https://trinityrcmsolution.com/logo.jpeg");
+    updateMetaTag("og:image", "https://trinityrcmsolution.com/logo.png");
     updateMetaTag("og:image:width", "1200");
     updateMetaTag("og:image:height", "630");
     updateMetaTag("og:image:alt", "Trinity RCM Solution - Client Testimonials");
@@ -83,7 +83,7 @@ const TestimonialsPage: React.FC = () => {
       "twitter:description",
       "Read testimonials from satisfied clients of Trinity RCM Solution. Discover how we've helped dental and medical practices improve their revenue cycle management."
     );
-    updateMetaTag("twitter:image", "https://trinityrcmsolution.com/logo.jpeg");
+    updateMetaTag("twitter:image", "https://trinityrcmsolution.com/logo.png");
   }, []);
 
   return (
@@ -103,7 +103,7 @@ const TestimonialsPage: React.FC = () => {
               "@type": "Organization",
               name: "Trinity RCM Solution",
               url: "https://trinityrcmsolution.com",
-              logo: "https://trinityrcmsolution.com/logo.jpeg",
+              logo: "https://trinityrcmsolution.com/logo.png",
               aggregateRating: {
                 "@type": "AggregateRating",
                 ratingValue: "4.4",

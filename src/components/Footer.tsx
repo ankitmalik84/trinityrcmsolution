@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
           <div className="flex items-center justify-center gap-3">
             <div className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-xl overflow-hidden">
               <img
-                src="/logo.jpeg"
+                src="/logo.png"
                 alt="Trinity RCM Solution Logo"
                 className="w-full h-full object-cover"
               />
@@ -75,9 +75,9 @@ const Footer: React.FC = () => {
 
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
+        <div className="flex flex-col md:flex-row justify-between gap-8 lg:gap-16">
           {/* Company Info */}
-          <div>
+          <div className="max-w-md">
             <h4 className="text-lg font-semibold mb-6">About Trinity RCM</h4>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Trinity RCM is dedicated to empowering healthcare practices to

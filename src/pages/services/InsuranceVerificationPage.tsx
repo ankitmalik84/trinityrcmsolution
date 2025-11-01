@@ -67,7 +67,7 @@ const InsuranceVerificationPage: React.FC = () => {
       "og:description",
       "Real-time insurance verification and eligibility checks to confirm patient coverage before treatment."
     );
-    updateMetaTag("og:image", "https://trinityrcmsolution.com/logo.jpeg");
+    updateMetaTag("og:image", "https://trinityrcmsolution.com/logo.png");
     updateMetaTag("og:image:width", "1200");
     updateMetaTag("og:image:height", "630");
     updateMetaTag(
@@ -88,7 +88,7 @@ const InsuranceVerificationPage: React.FC = () => {
       "twitter:description",
       "Real-time insurance verification and eligibility checks to confirm patient coverage before treatment."
     );
-    updateMetaTag("twitter:image", "https://trinityrcmsolution.com/logo.jpeg");
+    updateMetaTag("twitter:image", "https://trinityrcmsolution.com/logo.png");
   }, []);
 
   const benefits = [

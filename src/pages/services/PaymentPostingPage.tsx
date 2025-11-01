@@ -73,7 +73,7 @@ const PaymentPostingPage: React.FC = () => {
       "og:description",
       "Automated payment posting and reconciliation services for faster payment processing."
     );
-    updateMetaTag("og:image", "https://trinityrcmsolution.com/logo.jpeg");
+    updateMetaTag("og:image", "https://trinityrcmsolution.com/logo.png");
     updateMetaTag("og:image:width", "1200");
     updateMetaTag("og:image:height", "630");
     updateMetaTag("og:image:alt", "Trinity RCM Solution - Payment Posting");
@@ -91,7 +91,7 @@ const PaymentPostingPage: React.FC = () => {
       "twitter:description",
       "Automated payment posting and reconciliation services for faster payment processing."
     );
-    updateMetaTag("twitter:image", "https://trinityrcmsolution.com/logo.jpeg");
+    updateMetaTag("twitter:image", "https://trinityrcmsolution.com/logo.png");
   }, []);
 
   const benefits = [

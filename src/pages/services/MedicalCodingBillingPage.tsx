@@ -74,7 +74,7 @@ const MedicalCodingBillingPage: React.FC = () => {
       "og:description",
       "Expert medical coding and billing services using CPT, ICD-10, and HCPCS codes. Accurate coding for maximum reimbursement."
     );
-    updateMetaTag("og:image", "https://trinityrcmsolution.com/logo.jpeg");
+    updateMetaTag("og:image", "https://trinityrcmsolution.com/logo.png");
     updateMetaTag("og:image:width", "1200");
     updateMetaTag("og:image:height", "630");
     updateMetaTag(
@@ -95,7 +95,7 @@ const MedicalCodingBillingPage: React.FC = () => {
       "twitter:description",
       "Expert medical coding and billing services using CPT, ICD-10, and HCPCS codes. Accurate coding for maximum reimbursement."
     );
-    updateMetaTag("twitter:image", "https://trinityrcmsolution.com/logo.jpeg");
+    updateMetaTag("twitter:image", "https://trinityrcmsolution.com/logo.png");
   }, []);
 
   const codeTypes = [

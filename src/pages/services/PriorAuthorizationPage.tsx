@@ -67,7 +67,7 @@ const PriorAuthorizationPage: React.FC = () => {
       "og:description",
       "Expert prior authorization services to secure approvals before treatment. Fast turnaround times and high approval rates."
     );
-    updateMetaTag("og:image", "https://trinityrcmsolution.com/logo.jpeg");
+    updateMetaTag("og:image", "https://trinityrcmsolution.com/logo.png");
     updateMetaTag("og:image:width", "1200");
     updateMetaTag("og:image:height", "630");
     updateMetaTag("og:image:alt", "Trinity RCM Solution - Prior Authorization");
@@ -85,7 +85,7 @@ const PriorAuthorizationPage: React.FC = () => {
       "twitter:description",
       "Expert prior authorization services to secure approvals before treatment. Fast turnaround times and high approval rates."
     );
-    updateMetaTag("twitter:image", "https://trinityrcmsolution.com/logo.jpeg");
+    updateMetaTag("twitter:image", "https://trinityrcmsolution.com/logo.png");
   }, []);
 
   const benefits = [

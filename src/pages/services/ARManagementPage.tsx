@@ -73,7 +73,7 @@ const ARManagementPage: React.FC = () => {
       "og:description",
       "Comprehensive A/R management services to reduce outstanding receivables, improve cash flow, and accelerate collections."
     );
-    updateMetaTag("og:image", "https://trinityrcmsolution.com/logo.jpeg");
+    updateMetaTag("og:image", "https://trinityrcmsolution.com/logo.png");
     updateMetaTag("og:image:width", "1200");
     updateMetaTag("og:image:height", "630");
     updateMetaTag("og:image:alt", "Trinity RCM Solution - A/R Management");
@@ -91,7 +91,7 @@ const ARManagementPage: React.FC = () => {
       "twitter:description",
       "Comprehensive A/R management services to reduce outstanding receivables, improve cash flow, and accelerate collections."
     );
-    updateMetaTag("twitter:image", "https://trinityrcmsolution.com/logo.jpeg");
+    updateMetaTag("twitter:image", "https://trinityrcmsolution.com/logo.png");
   }, []);
 
   const benefits = [
