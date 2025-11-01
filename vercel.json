@@ -1,27 +1,17 @@
 {
   "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        }
-      ]
-    }
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/contact", "destination": "/contact/index.html" },
+    { "source": "/testimonials", "destination": "/testimonials/index.html" },
+    { "source": "/services/revenueCycleManagement", "destination": "/services/revenueCycleManagement/index.html" },
+    { "source": "/services/medicalCodingBilling", "destination": "/services/medicalCodingBilling/index.html" },
+    { "source": "/services/insuranceVerification", "destination": "/services/insuranceVerification/index.html" },
+    { "source": "/services/priorAuthorization", "destination": "/services/priorAuthorization/index.html" },
+    { "source": "/services/arManagement", "destination": "/services/arManagement/index.html" },
+    { "source": "/services/denialManagement", "destination": "/services/denialManagement/index.html" },
+    { "source": "/services/paymentPosting", "destination": "/services/paymentPosting/index.html" },
+    { "source": "/services/providerCredentialing", "destination": "/services/providerCredentialing/index.html" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
+

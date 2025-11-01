@@ -75,9 +75,16 @@ const routes = {
   },
 };
 
-function generateHTML(route, meta, baseUrl) {
+function generateHTML(route, meta, baseUrl, originalHTML) {
   const fullUrl = `${baseUrl}${meta.url}`;
   const imageUrl = `${baseUrl}${meta.image}`;
+
+  // Extract the script and link tags from the original built HTML
+  const scriptMatch = originalHTML.match(/<script[^>]*src="([^"]*)"[^>]*><\/script>/);
+  const cssMatch = originalHTML.match(/<link[^>]*href="([^"]*\.css)"[^>]*>/);
+  
+  const scriptTag = scriptMatch ? scriptMatch[0] : '<script type="module" src="/src/main.tsx"></script>';
+  const cssTag = cssMatch ? cssMatch[0] : '';
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -102,10 +109,11 @@ function generateHTML(route, meta, baseUrl) {
     <meta name="twitter:title" content="${meta.title}" />
     <meta name="twitter:description" content="${meta.description}" />
     <meta name="twitter:image" content="${imageUrl}" />
+    ${cssTag}
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    ${scriptTag}
   </body>
 </html>
 `;
@@ -118,8 +126,12 @@ function generatePages() {
 
   console.log('🚀 Generating static HTML pages for SEO...\n');
 
+  // Read the original built index.html to get the correct asset references
+  const originalIndexPath = path.join(distPath, 'index.html');
+  const originalHTML = fs.readFileSync(originalIndexPath, 'utf-8');
+
   Object.entries(routes).forEach(([route, meta]) => {
-    const html = generateHTML(route, meta, baseUrl);
+    const html = generateHTML(route, meta, baseUrl, originalHTML);
     
     // Determine file path
     let filePath;
