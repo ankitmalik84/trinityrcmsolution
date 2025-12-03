@@ -333,7 +333,7 @@ const Services: React.FC = () => {
             />
 
             <motion.h3
-              className="text-4xl font-black text-white mb-6 relative z-10"
+              className="text-2xl md:text-4xl font-black text-white mb-6 relative z-10"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -341,7 +341,7 @@ const Services: React.FC = () => {
               Ready to Optimize Your Revenue Cycle?
             </motion.h3>
             <motion.p
-              className="text-xl text-white/90 mb-8 max-w-3xl mx-auto relative z-10"
+              className="text-md md:text-xl text-white/90 mb-8 max-w-3xl mx-auto relative z-10"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -351,7 +351,7 @@ const Services: React.FC = () => {
             </motion.p>
             <Link to="/contact">
               <motion.button
-                className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-12 py-4 rounded-2xl text-xl font-bold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-glow hover-lift relative z-10"
+                className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white md:px-12 px-8 py-4 rounded-2xl text-md md:text-xl font-bold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-glow hover-lift relative z-10"
                 whileHover={{
                   scale: 1.05,
                   boxShadow: "0 20px 40px rgba(251, 191, 36, 0.4)",
