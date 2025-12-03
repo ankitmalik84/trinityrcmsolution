@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between gap-8 lg:gap-16">
           {/* Company Info */}
           <div className="max-w-md">
-            <h4 className="text-lg font-semibold mb-6">About Trinity RCM</h4>
+            <h4 className="text-lg font-semibold mb-2 md:mb-6 mt-2">About Trinity RCM</h4>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Trinity RCM is dedicated to empowering healthcare practices to
               optimize their workflows and achieve greater financial success
