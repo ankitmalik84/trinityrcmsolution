@@ -120,7 +120,7 @@ const Header: React.FC = () => {
               whileTap={{ scale: 0.95 }}
             >
               <motion.div
-                className="w-56 h-24 rounded-xl flex items-center justify-center shadow-xl overflow-hidden"
+                className="w-40 md:w-56 h-16 md:h-24 rounded-xl flex items-center justify-center shadow-md md:shadow-xl overflow-hidden"
                 variants={logoVariants}
               >
                 <img
