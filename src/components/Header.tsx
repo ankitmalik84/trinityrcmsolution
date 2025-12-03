@@ -36,10 +36,9 @@ const Header: React.FC = () => {
   };
 
   const logoVariants = {
-    hidden: { scale: 0, rotate: -180 },
+    hidden: { scale: 0 },
     visible: {
       scale: 1,
-      rotate: 0,
       transition: {
         type: "spring" as const,
         stiffness: 200,

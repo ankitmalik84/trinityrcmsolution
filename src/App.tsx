@@ -10,6 +10,8 @@ import ARManagementPage from "./pages/services/ARManagementPage";
 import DenialManagementPage from "./pages/services/DenialManagementPage";
 import PaymentPostingPage from "./pages/services/PaymentPostingPage";
 import ProviderCredentialingPage from "./pages/services/ProviderCredentialingPage";
+import PatientBillingPage from "./pages/services/PatientBillingPage";
+import PracticeTransitionPage from "./pages/services/PracticeTransitionPage";
 
 function App() {
   return (
@@ -47,6 +49,14 @@ function App() {
           <Route
             path="/services/providerCredentialing"
             element={<ProviderCredentialingPage />}
+          />
+          <Route
+            path="/services/patientBilling"
+            element={<PatientBillingPage />}
+          />
+          <Route
+            path="/services/practiceTransition"
+            element={<PracticeTransitionPage />}
           />
         </Routes>
       </div>

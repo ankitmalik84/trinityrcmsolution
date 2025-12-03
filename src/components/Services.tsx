@@ -90,7 +90,7 @@ const Services: React.FC = () => {
       title: "Patient Billing & Support",
       description:
         "Patient-friendly billing and comprehensive support services.",
-      path: "/contact",
+      path: "/services/patientBilling",
     },
     {
       icon: ClipboardList,
@@ -110,7 +110,7 @@ const Services: React.FC = () => {
       title: "Practice Transition and Planning",
       description:
         "Smooth practice transitions and strategic planning support.",
-      path: "/contact",
+      path: "/services/practiceTransition",
     },
     {
       icon: DollarSign,
@@ -165,7 +165,7 @@ const Services: React.FC = () => {
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        // viewport={{ once: true, amount: 0.3 }}
+      // viewport={{ once: true, amount: 0.3 }}
       >
         <motion.div className="text-center mb-20" variants={itemVariants}>
           <motion.h2
