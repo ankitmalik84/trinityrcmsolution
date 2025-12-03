@@ -106,7 +106,7 @@ const Contact: React.FC = () => {
         phone: formData.phone,
         service: formData.service,
         message: formData.message,
-        to_email: "Info@trinityrcmsolutions.com",
+        to_email: "Info@trinityrcmsolution.com",
         reply_to: formData.email,
       };
 
@@ -379,11 +379,10 @@ const Contact: React.FC = () => {
                   <motion.button
                     type="submit"
                     disabled={isLoading}
-                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg ${
-                      isLoading
+                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg ${isLoading
                         ? "bg-gray-400 cursor-not-allowed"
                         : "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-                    }`}
+                      }`}
                     whileHover={!isLoading ? { scale: 1.02 } : {}}
                     whileTap={!isLoading ? { scale: 0.98 } : {}}
                   >
